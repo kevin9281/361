@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>购物车</title>
+  <link rel="stylesheet" href="cart.css">
+  <script src="js/ajax.js"></script>
+ 
+</head>
+<body onload="load()">
+  <div id="login-info" >
+    5秒后跳转到<a href="/login.html">登录</a>页面
+  </div>
+  <h4>我的购物车</h4>
+
+  <table>
+    
+    <thead>
+      <td colspan="2"><input type="checkbox" name="" >全选</td>
+      
+      <td>名称</td>
+      
+      <td>单价</td>
+      <td>数量</td>
+      <td>总价</td>
+      <td></td>
+    </thead>
+    <tbody id="cartItemContainer"></ttbody>
+    <tfoot>
+      <td>小计：</td>
+      <td colspan="2"><input type="button" value="清空" onclick="delAll()"></td>
+      <td colspan="2"><input type="button" value="结算"></td>
+    </tfoot>
+  </table>
+ 
+</body>
+<script src="cart.js">
+  
+</script>
+</html>

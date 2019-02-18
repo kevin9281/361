@@ -1,0 +1,136 @@
+display:block:
+
+block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。
+
+block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。
+
+block元素可以设置margin和padding属性。
+
+button onclick 实现页面跳转:
+
+1、onclick="javascript:window.location.href='aa.htm' "
+
+2、onclick="location='URL' "
+
+3、onclick="window.location.href='#' "
+
+Bootstrap 下拉菜单（Dropdown）插件:
+
+Bootstrap 下拉菜单 这一章讲解了下拉菜单，但是没有涉及到交互部分，本章将具体讲解下拉菜单的交互。使用下拉菜单（Dropdown）插件，您可以向任何组件（比如导航栏、标签页、胶囊式导航菜单、按钮等）添加下拉菜单。
+
+如果您想要单独引用该插件的功能，那么您需要引用 dropdown.js。或者，正如 Bootstrap 插件概览 一章中所提到，您可以引用 bootstrap.js 或压缩版的 bootstrap.min.js。
+
+
+Swiper: 首页:https://www.swiper.com.cn/
+
+Swiper常用于移动端网站的内容触摸滑动
+
+Swiper是纯javascript打造的滑动特效插件，面向手机、平板电脑等移动终端。
+
+swiper是一款轻量级的轮播图插件，不仅支持pc端更是为移动端而生，用它可以快速地做出一个轮播图，或者扩展使其做出复杂的轮播效果。
+
+swiper使用需要两个文件，一个是swiper.css，里面规定了一些在这个滑动轮播插件中常用的样式，当然如果你愿意的话可以自己定义样式
+另外一个是swiper.js这个是插件的主体部分
+
+类名为swiper-container 是滑动轮播插件的包裹器
+
+style opacity属性:
+
+让 DIV 元素半透明 opacity 属性设置或返回元素的不透明度 元素的不透明度级别描述了透明度级别，当不透明度为 1 时表示完全不透明，当不透明度为 0.5 时表示半透明，当不透明度为 0 时表示完全透明。
+
+translate3d:
+
+一般在 Chrome 中，3D或透视变换（perspective transform）CSS属性和对 opacity 进行 CSS 动画会创建新的图层，在硬件加速渲染通道的优化下，GPU 完成 3D 变形等操作后，将图层进行复合操作（Compesite Layers），从而避免触发浏览器大面积重绘和重排。
+
+注：3D 变形会消耗更多的内存和功耗。
+
+使用 translate3d 右移 500px 的动画流畅度要明显优于直接使用 left。
+
+http://www.iconfont.cn 阿里图标网站
+
+361项目阶段:  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一
+
+底部样式 foooter:   max-width 最大宽度  min-width 最小宽度  margin:0 auto，意思就是上下外边距为0，左右外边距为auto，就是自动适应。
+margin:0 auto;可以使盒子居中，text-align:center;可以使此盒子内的内联元素居中，故有时需要两者结合使用才能使得盒子及其中文本一起居中。
+padding-left 左内边距 padding-top 上内边距  float: left 左浮动  font-weight 粗体字符  
+no-repeat 背景图像将仅显示一次。 是否平铺（repeat-x,横向平铺；repeat-y，纵向平铺）
+position:fixed  生成绝对定位的元素，相对于浏览器窗口进行定位。
+z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。 Z-index 仅能在定位元素上奏效（例如 position:absolute;）！元素可拥有负的 z-index 属性值。
+
+
+头部样式 header:   a:visited  已访问过的状态 text-decoration: none 属性规定添加到文本的修饰 默认。定义标准的文本。 CSS文字修饰为无;一般用于设置清除超链接的默认下划线
+transition(属性渐变): all 0.2s linear;  linear：线性过度  
+-webkit-transition: all 0.2s linear;  两秒线性过渡    linear：线性过度 CSS属性(none|all|属性) 持续时间 时间函数 延迟时间
+:active 鼠标左键点下去改状态 none 无修饰  list-style: none 列的样式 取消前面的点列表符号隐藏.  font-style 属性定义字体的风格: normal 	默认值。浏览器显示一个标准的字体样式。
+'Arial' 字体 outline （轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。 
+input[type="button"], input[type="submit"], input[type="reset"]  input为button input为submit input为reset
+-webkit-appearance:none  去除系统默认appearance的样式,常用于IOS下移除原生样式 改变按钮和其他控件的外观，使其类似于原生控件。
+!important 设置优先级最大
+transparent 实际上background默认的颜色就是透明的属性，所以写和不写都是一样的。 如果一个元素覆盖在另外一个元素之上，而你想显示下面的元素，这时你就需要把上面这个元素的background设置为transparent
+-moz火狐浏览器私有属性
+text-overflow :ellipsis 当对象内文本溢出时显示省略标记（...）。在使用的时候，有时候发现不会出现省略标记效果，经过测试发现，使用ellipsis的时候，必须配合overflow:hidden; white-space:nowrap; width:50%;这三个样式共同使用才会有效果，示例代码：
+
+
+首页插图: figure <figure> 标签规定独立的流内容（图像、图表、照片、代码等等）。figure 元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响。
+figcaption : <figcaption> 标签定义 figure 元素的标题（caption）。"figcaption" 元素应该被置于 "figure" 元素的第一个或最后一个子元素的位置。
+&deg; 转义字符 相当于°padding- 内边距 text-align: center; 字体居中 cursor: pointer;  光标呈现为指示链接的指针（一只手）
+:after   :content的意思顾名思义，是“内容”，它的作用就是在css中直接生成网页显示的 内容， 这个属性要结合：before和：after这俩个伪类属性来使用。下面详细介绍它的用法 。
+:after 伪元素在元素之后添加内容。这个伪元素允许创作人员在元素内容的最后面插入生成内容。默认地，这个伪元素是行内元素，不过可以使用属性 display 改变这一点。
+overflow:hidden 隐藏溢出 清除浮动, text-transform 属性控制文本的大小写。uppercase 定义仅有大写字母。
+backface-visibility 属性定义当元素背面向屏幕时是否可见。 如果在旋转元素不希望看到其背面时，该属性很有用 visible 背面是可见的。
+vertical-align 属性设置元素的垂直对齐方式,该属性定义行内元素的基线相对于该元素所在行的基线的垂直对齐。允许指定负长度值和百分比值。这会使元素降低而不是升高。在表单元格中，这个属性会设置单元格框中的单元格内容的对齐方式。
+middle 把此元素放置在父元素的中部。top 把元素的顶端与行中最高元素的顶端对齐 text-bottom 把元素的底端与父元素字体的底端对齐。
+两个div 都设置 display：inline-block，正常显示；但是在第二个div中加一个块级元素或者内联元素，显示就变了个样，为什么？   解决方案就是给第二个div加上：vertical-align:top。
+padding:25px 0; 上下   左右 外边距
+text-transform 属性控制文本的大小写。 uppercase 定义仅有大写字母。
+backface-visibility: hidden 隐藏被旋转的 div 元素的背面：如果在旋转元素不希望看到其背面时，该属性很有用。
+-webkit 是表示针对 safari 浏览器支持，-ms表示针对 IE 浏览器支持。
+比如你写的transition:width 2s; 让他兼容老版本火狐 就在前面写上-moz-transition:width 2s; 让他兼容Safari　Chrome 就在前面写上-webkit-transition:width 2s; 让他兼容 Opera 就在前面写上-o-transition:width 2s;
+transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。如下表示的是在 X` 轴向右移动 50px, Y 轴向下移动 100px。 -webkit-transform:translate(50px 100px);
+transition 属性是一个简写属性，用于设置四个过渡属性 逐渐过渡 请始终设置 transition- 属性，否则时长为 0，就不会产生过渡效果。
+translate3d(x,y,z) 定义 3D 转换。 
+:after能添加好图片，控制好位置，:hover来控制显示隐藏。重要的就是在鼠标经过时添加:after的实现，写法为:hover::after， :hover 选择器用于选择鼠标指针浮动在上面的元素。
+z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。 Z-index 仅能在定位元素上奏效（例如 position:absolute;）！元素可拥有负的 z-index 属性值。
+cursor: pointer 光标呈现为指示链接的指针（一只手）
+zoom: 1 在做IE6、IE7、IE8浏览器兼容的时候，经常会遇到一些问题，可以使用zoom:1来解决，有如下作用
+
+ :hover 鼠标悬停 :active 鼠标点击
+
+一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一
+
+width=100% height scrolling=no fremeborder=0
+
+inline-block布局 vs 浮动布局
+    a.不同之处：对元素设置display：inline-block ，元素不会脱离文本流，而float就会使得元素脱离文本流，且还有父元素高度坍塌的效果
+    b.相同之处：能在某程度上达到一样的效果
+    设置之后两个块元素就不独占一行了 共享一行
+
+text-align: center 文本居中  padding: 10px 0; 上下内边距10px  左右内边距0
+
+1、static（静态定位）：默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。
+
+2、relative（相对定位）：生成相对定位的元素，通过top,bottom,left,right的设置相对于其正常（原先本身）位置进行定位。可通过z-index进行层次分级。　　
+
+3、absolute（绝对定位）：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。可通过z-index进行层次分级。
+
+4、fixed（固定定位）：生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。可通过z-index进行层次分级。
+
+position: relative : 定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。 无论父级存在不存在，无论有没有TRBL，均是以父级的左上角进行定位，但是父级的Padding属性会对其影响。
+相对定位元素经常被用来作为绝对定位元素的容器块。
+position:absolute; : 绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于<html>:
+通过绝对定位，元素可以放置到页面上的任何位置
+
+cursor: pointer;  光标呈现为指示链接的指针（一只手）
+
+:after   :content的意思顾名思义，是“内容”，它的作用就是在css中直接生成网页显示的 内容， 这个属性要结合：before和：after这俩个伪类属性来使用。下面详细介绍它的用法 。
+:after 伪元素在元素之后添加内容。这个伪元素允许创作人员在元素内容的最后面插入生成内容。默认地，这个伪元素是行内元素，不过可以使用属性 display 改变这一点。
+
+:after能添加好图片，控制好位置，:hover来控制显示隐藏。重要的就是在鼠标经过时添加:after的实现，写法为:hover::after， :hover 选择器用于选择鼠标指针浮动在上面的元素。
+
+display: none  : 	此元素不会被显示。 点击上去就隐藏属性
+
+target="_blank"  :在新窗口中打开被链接文档。
+
+common.js 是 jquery.min.js 的插件
+

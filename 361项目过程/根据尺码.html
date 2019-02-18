@@ -1,0 +1,39 @@
+/**
+ *根据颜色获取尺码 @Ljp 20170817
+ */
+function getSizeListFromColor() {
+  var color = $("ul.product-color-choice li.select").attr("data-color");
+  var size = $("div.product-size button.size").attr("data-size");
+  var optStr = $.parseJSON(skulist);
+  var reStr = "",
+  flag = false;
+  if (optStr) {
+    for (var i = 0; i < optStr.length; i++) {
+      if (optStr[i].pro_color == color) {
+        if (optStr[i].number > 0) {
+          for (var j = 0; j < optStr[i].number; j++) {
+            var classStr = "";
+            if (size && optStr[i].colorsize[j].pro_sizes == size) classStr = ' doselected';
+            if (!size && !flag && optStr[i].colorsize[j].pro_count > 0) {
+              classStr = 'doselected';
+              flag = true;
+            }
+            if (optStr[i].colorsize[j].pro_count <= 0) classStr = 'on';
+            reStr += '<li class="' + classStr + '" data-number="' + optStr[i].colorsize[j].pro_count + '" data-sizes="' + optStr[i].colorsize[j].pro_sizes + '"><a>' + optStr[i].colorsize[j].pro_sizes + '</a></li>';
+          }
+        }
+      }
+    }
+  }
+  $("div.product-size-choice ul").html(reStr);
+  /*if( loading ){
+		var nsize = $("li.doselected").children('a').html();
+		var maxnum = $("li.doselected").attr("data-number");
+		$(".product-size .size").attr("data-size",nsize).attr("data-count",maxnum).html('尺码选择('+nsize+') +');
+		$('.product-size-choice').fadeOut();
+	}*/
+}
+
+/**
+ * loginiFrame  @Ljp 20170817
+ */

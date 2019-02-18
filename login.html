@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <header>
+        <div class="login-logo">
+            <a href="http://www.ioart.com/"><img src="images/logo-h@2x.png" alt=""></a>
+        </div>
+    </header>
+    <section>
+        <div id="container">
+            <img src="images/login-bg.jpg" alt="" class="bg-img">
+            <div id="login">
+                <ul class="tabMenu">
+                    <li>
+                        <a href="#" data-id="#content2" data-toggle="tab">快速登录
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-id="#content1" data-toggle="tab">
+                        账号密码登录
+                        </a>
+                    </li>
+                </ul>
+                <div id="login-content">
+                    <ul class="form-list" id="content1">
+                        <li>
+                            <div class="input-box">
+                                <input type="email" name="username" value="" id="username"  placeholder="请输入注册邮箱">
+                            </div>
+                        </li>
+
+                        <li>
+
+                            <div class="input-box">
+                                <input type="password" name="password" value="" id="password"  placeholder="请输入密码">
+
+                            </div>
+                        </li>
+                        <div class="login-txt">
+                                <a href="http://www.ioart.com/customer/account/forgotpassword/">忘记密码？</a>
+                                <a href="http://www.ioart.com/customer/account/create/">立即注册</a>
+                        </div>
+                        
+                        <button type="submit" class="btn-login" onclick="login()">登录</button>
+                        
+                            
+                        
+                    </ul>
+                    <ul id='content2'>
+                      <li><a href="">
+                           <img src="images/微博 1.png">
+                      </a></li>
+                      <li><a href=""><img src="images/微信 1.png"></a></li>  
+                    </ul>
+                </div>
+
+                <div class="login-tips">
+                        <span>加入我们，即刻开始享受不一样的生活</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="js/ajax.js"></script>
+<script src="js/login.js">
+    
+</script>
+</html>

@@ -1,0 +1,15 @@
+body{
+ font-family: "Microsoft YaHei", "Arial";
+ line-height: 1;
+ color: #fff;
+ margin:0;
+ padding:0;
+}
+html {
+ font-size: 9px;
+}
+.content{
+ color:#00f;
+ background:#faa;
+ font-size:24px;
+}

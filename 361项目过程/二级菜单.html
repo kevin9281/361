@@ -1,0 +1,22 @@
+(() = >{
+  "use strict";
+  document.getElementById("content1").style.display = "block";
+  var tabs = document.querySelectorAll("[data-toggle=tab]");
+  tabs[0].className = "on";
+  for (var tab of tabs) {
+    tab.onclick = function() {
+      for (var tab of tabs) {
+        tab.className = "";
+      }
+      tab = this;
+      tab.className = "on";
+      var divs = document.querySelectorAll("#container>div");
+      for (var div of divs) {
+        div.style.display = "none";
+      }
+      var id = tab.getAttribute("data-target");
+      var div = document.getElementById(id);
+      div.style.display = "block";
+    }
+  }
+})();

@@ -1,0 +1,118 @@
+<html>
+ <head>
+  <meta charset="UTF-8" />
+  <title>我的订单</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="robots" content="index, follow" />
+  <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="http://www.361sport.com/Uploads/shop/css/public.css" />
+  <link rel="stylesheet" type="text/css" href="http://www.361sport.com/Uploads/shop/css/swiper.min.css" />
+  <link rel="stylesheet" type="text/css" href="http://www.361sport.com/Uploads/shop/css/index.css" />
+  <script src="http://www.361sport.com/Uploads/shop/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+ </head>
+ <body class="">
+  
+  <div class="wrap clearfloat">
+   <div class="my clearfloat">
+    <div class="profile-left">
+     <div class="userinfo">
+      <h2>颜***颂</h2>
+      <p>普通会员</p>
+      <p>积分：<span>0</span></p>
+     </div>
+     <div class="theme-sidebar">
+      <ul>
+       <li><a href="/User/profile.html">帐号资料</a></li>
+       <li><a class="active" href="/User/order.html">我的订单</a></li>
+       <li><a href="/User/coupon.html">优惠券</a></li>
+       <li><a href="/User/collect.html">我的收藏</a></li>
+       <li><a href="/User/address.html">收货地址</a></li>
+       <li><a href="/Reback/index.html">售后服务</a></li>
+      </ul>
+     </div>
+     <div class="theme-sidebar">
+      <ul>
+       <li><a href="/Scores/index.html">我的积分</a></li>
+       <!--<li><a href="#">积分商城</a></li>-->
+      </ul>
+     </div>
+    </div>
+    <div class="myOrder fr">
+     <h2 class="myOrder-tit">我的订单</h2>
+     <div class="myOrder-tab">
+      <ul class="myOrder-tab-tit">
+       <li class="select"><a href="/User/order.html">全部订单</a></li>
+       <li><a href="/User/order/status/nopay.html">未支付订单</a></li>
+      </ul>
+      <form class="fr" action="" method="GET">
+       <div class="myOrder-search">
+        <input type="text" name="orderno" value="" placeholder="订单搜索" />
+        <button>搜索</button>
+        <b></b>
+       </div>
+      </form>
+     </div>
+     <div class="myOrder-tab-con myOrder-tab-top">
+      <div class="myOrder-tab-div show">
+       <ul class="myorderDetails myorderDetails1 myorderDetails8">
+        <li></li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script type="text/javascript" src="http://www.361sport.com/Uploads/shop/js/index.js"></script>
+  <script type="text/javascript">		
+		$(function(){
+			$(document).on("click","a#ordercancel",function(){
+				popUp("确认取消该订单？",$(this).attr("data-oid")); return true;
+			});
+			$(document).on("click","button#confirm",function(){
+				var oid = $(this).parent().attr("data-cartid");
+				var ajaxCurl = "/User/ordercancel.html";
+				$("div.popup").remove();
+				$.post(ajaxCurl,{oid:oid},function( result ){
+					if( result.status == '0' ){
+						$("div#myorder_"+oid).html('<br/><br/><a href="javascript:void(0);" class="after-sales">已关闭</a><br/>');
+						return true;
+					} else { return false; }
+				},"json");
+			});
+			//
+			$(document).on('click','.myOrder-search',function(){
+				$(this).children('b').animate({"width":"180px"})
+				$(this).children('input').animate({"width":"180px"},function(){
+					$(this).next().fadeIn();
+					$(this).attr('placeholder','输入订单编号')
+				})
+			})
+		});
+		var baseUrl="http://www.361sport.com/Uploads/shop";
+		//懒加载
+		var Loading=true;
+		var page = "1",type="",scrollTop = "0",loadUrl="/User/order.html",orderno="";
+		$(window).scroll(function() {
+			if ($(this).scrollTop() + $(window).height()+1900 >= $(document).height() && $(this).scrollTop() > 100) {
+				if( Loading == true ){
+					Loading = false;
+					page++;
+					$.post(loadUrl,{page:page,status:type,orderno:orderno},function( result ){
+						if( result.status == '0' ){
+							$("ul.myorderDetails").children("li").append(result.msg);
+							Loading=true;  
+							return true;
+						}
+					},"json");
+				}
+			}
+		}); 
+		</script>
+  <script src="http://www.361sport.com/Uploads/shop/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://www.361sport.com/Uploads/shop/js/common.js" type="text/javascript" charset="utf-8"></script>
+  <a href="javascript:;" class="return-top" style="display: none;"></a>
+ 
+ </body>
+</html>

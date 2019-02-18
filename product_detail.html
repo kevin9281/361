@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/jquery-1.9.1.min.js"></script>
+
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+ 
+  <link rel="stylesheet" href="css/product_detail.css" type="text/css">
+  <title>Document</title>
+</head>
+<body>
+ <!--头部-->
+
+
+  <!--页面内容-->
+  <div class="container">
+    <!--面包屑导航-->
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html" >主页</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="index.html" >办公</a>
+      </li>
+      <li class="breadcrumb-item active">
+        <span>社会雕塑—博伊斯笔记本</span>
+      </li>
+    </ul>
+    <!--商品详情-->
+    <div class="row">
+      <div class="col-2">
+        <ul class="list-unstyled" id="pd-img-list">
+          <li class="pd-img"><img src="images/pd-img1.jpg" data-md='images/note1-md.jpg' data-lg='images/note1-lg.jpg'></li>
+          <li class="pd-img"><img src="images/pd-img2.jpg" data-md='images/note2-md.jpg' data-lg='images/note2-lg.jpg'></li>
+          <li class="pd-img"><img src="images/pd-img3.jpg" data-md='images/note3-md.jpg' data-lg='images/note3-lg.jpg'></li>
+        </ul>
+      </div>
+      <div class="col-6 " id="img-detail"></div>
+      <div  id="lgDiv" class="col-4"></div>
+      
+
+    </div>
+    <div class="row">
+      <div class="col-8"></div>
+      <!--商品数量按钮，可进行加减-->
+      <div class="col-4">
+      
+        <div id="c_btn">
+          <button class="bg-dark text-white">-</button>
+          <span>1</span>
+          <button class="bg-dark text-white">+</button>
+          
+        </div>
+      </div>
+    </div>
+    <!--详情与评论双标签-->
+    <div class="tabs">
+        <ul id="tab" class="list-unstyled d-flex">
+          <li>
+            <a href="#" data-toggl=tab data-id="content1">产品详情</a>
+          </li>
+          <li>
+            <a href="#" data-toggl=tab data-id="content2">用户评论</a>
+          </li>
+        </ul>
+    </div>
+    <div class="contents">
+      <div id="content1"><p>
+          阳江组合的大甩卖系列之一。 阳江组合和他们众多的当地合作者以其创作实践力图挣脱任何既定规则和可控范围。他们的书法可以无所不在地和各种异质的社会行为结合起来，新闻、搏彩、足球、大甩卖……在日常、酒、茶和话语的共同发酵中，时间和材料转化成整体的书法情境。
+      </p></div>
+      <div id="content2"><p>
+          暂无用户评论！
+      </p></div>
+    </div>
+  </div>
+
+ <!--尾部-->
+ <script src="js/product_detail.js"></script>
+</body>
+</html>

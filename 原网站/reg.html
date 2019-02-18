@@ -1,0 +1,58 @@
+<html>
+ <head>
+  <meta charset="UTF-8" />
+  <title>注册账号</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="robots" content="index, follow" />
+  <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+ 
+  <link rel="stylesheet" type="text/css" href="http://361cdn.361sport.com/shop/css/swiper.min.css" />
+  <link rel="stylesheet" type="text/css"href="css/reg.css">
+  <script src="http://361cdn.361sport.com/shop/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+ </head>
+ <body class="">
+  
+  <div class="wrap">
+    <div class="register data-table">
+     <h2>注册</h2>
+     <input type="text" placeholder="请输入昵称" id="nickname" />
+     <div class="phone">
+      <span class="fl">+ 86</span>
+      <input type="text" placeholder="请输入手机号码" id="mobile" />
+     </div>
+     <div class="count">
+      <input type="text" name="jscode" placeholder="请输入右边算法结果" id="jscode" />
+      <span id="countCode"><img id="change-count" src="/Index/verify.html" alt="点击换一张" /></span>
+      <a href="javascript:;" class="change-count">换一张</a>
+     </div>
+     <div class="message">
+      <input type="tel" maxlength="6" placeholder="请输入短信验证码" id="sms_code" />
+      <button id="message" class="show">获取短信验证码</button>
+      <button class="hide">获取短信验证码</button>
+     </div>
+     <input type="password" placeholder="请输入6至16位密码" id="password" />
+     <input type="password" placeholder="请重复输入6至16位密码" id="repassword" />
+     <div class="statement">
+      <b class="fl"></b>
+      <a href="javascript:;">我已阅读并同意《361&deg;商城协议》</a>
+     </div>
+     <button class="register-btn">立即注册</button>
+     <p>已有361&deg;商城账号？<a href="login.html">立即登录</a></p>
+    </div>
+   </div>
+  <script type="text/javascript">		var sendCode = "/Forget/sendcode.html";
+		var stype = "0";
+		var time="";
+		var validCode=true;
+		var code=$(".hide");
+		var regUrl = "/Member/register.html";
+		</script>
+  <script type="text/javascript" src="http://361cdn.361sport.com/shop/js/login.js"></script>
+  <script src="http://361cdn.361sport.com/shop/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://361cdn.361sport.com/shop/js/common.js" type="text/javascript" charset="utf-8"></script>
+  <a href="javascript:;" class="return-top"></a>
+
+ </body>
+</html>
