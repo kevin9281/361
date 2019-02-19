@@ -263,3 +263,21 @@ z-index: 89;
 .img1{
 	transition: 1s;
 }
+ul#a3{
+	position: absolute;
+	bottom:45px;
+	left: 917px;
+	z-index: 100;
+}
+ul#a3>li{
+	float: left;
+	width: 10px;
+	height:10px;
+	border-radius: 50%;
+	background: #333;
+	margin-left: 10px;
+	cursor:pointer;
+}
+ul#a3 li.show{
+	background: #f99302;
+}

@@ -1,5 +1,5 @@
 (()=>{
-	"use strict";
+"use strict";
 	$(function () { //dom事件加载执行后就执行这个
 		//获得地址栏中的search部分
 		//将search按=切割,取第2部分
@@ -9,14 +9,14 @@
 		var lid =search.split("=")[1]; //声明lid等于search传来参数里面的split切割等号后面的1位
 	//	console.log(lid); //打桩
 		$.ajax({
-			url:"http://localhost:3000/details",
+			url:"http://127.0.0.1:8080/details/detail?pid="+ lid,
 			type:"get",
-			data:{lid},
 			dataType:"json",
-			success:function (output) { //请求处理成功进入success里面处理函数
-	//			console.log(output);   //打桩
-	//从output大对象中解构出三个小部分分别使用
-	var {product,specs,pics}=output; //声明产品 规格 图片赋值到output传参
+			success:function (res) { //请求处理成功进入success里面处理函数
+	//			console.log(res);   //打桩
+	//从res大对象中解构出三个小部分分别使用
+	// var {img,id}=res; //声明产品 规格 图片赋值到res传参
+	console.log(res);
 			}}
 		)}
 	});

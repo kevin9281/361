@@ -1,17 +1,21 @@
+#设置连接服务器使用的编码
 SET NAMES UTF8;
+#创建一个数据库，如果存在就丢弃。
 DROP DATABASE IF EXISTS yjs;
+#创建数据库 设置储存的编码。
 CREATE DATABASE yjs CHARSET=UTF8;
+#进入数据库
 USE yjs;
 
-/*用户信息*/
+/*创建用户信息表*/
 CREATE TABLE yjs_user( 
-  id INT PRIMARY KEY AUTO_INCREMENT,  # id 自增
+  id INT PRIMARY KEY AUTO_INCREMENT, 
   uname VARCHAR(32),
   upwd VARCHAR(32),
   phone VARCHAR(16)
 );
 
-/*用户信息导入*/
+#插入用户数据
 INSERT INTO yjs_user VALUES
 (NULL, 'xiaohong', '123456','13501234567'),
 (NULL, 'xiaohuang', '123456','13501234568'),
@@ -22,9 +26,6 @@ INSERT INTO yjs_user VALUES
 (NULL, 'xiaohei', '123456','13501234560'),
 (NULL, 'xiaobai', '123456','13501234560');
  
- 
-
-
 
 CREATE TABLE yjs_detail_pic(
   pid INT PRIMARY KEY AUTO_INCREMENT,
