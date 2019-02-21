@@ -37,5 +37,5 @@ app.use ("/user",userRouter);
 //挂载首页路由到user路径下
 app.use ("/index",index);
 //测试: http://localhost:3000/detail?lid=9
-app.use("/details",detail);
+app.use("/detail",detail);
 

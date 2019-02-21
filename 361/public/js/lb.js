@@ -1,37 +1,49 @@
-var imgs = slider.children;
-for(var img of imgs){
-			img.onclick=function(){//img绑上单击事件
-				//this->当前img
-				var img=this;
-				//alert(img.alt);
-			}//img.onclick() //this->.前的当前img对象
-		}//img->最后一个img
+(() => {
+	"use strict";
+	// 首页轮播图
+	var aWrap = document.getElementById("banner");
+	var aBanner = aWrap.getElementsByClassName("banner");
+	var aSpan = aWrap.getElementsByClassName("tab")[0].getElementsByTagName("span");
 
-		function task(){
-			var img=//查找现在class为show的img
-				slider.getElementsByClassName("show")[0];
-			var li=a3.getElementsByClassName("show")[0];
-			img.className="";//清空img的class
-			li.className ="";
-			//如果img有下一个兄弟
-			if(img.nextElementSibling)
-				//设置img的下一个兄弟的class为show
-				img.nextElementSibling.className="show";
-			else//否则
-				//设置img的父元素的第一个孩子的className为show
-				img.parentNode.children[0].className="show";
-			/* 四小圆点 */
-			if(li.nextElementSibling)
-				li.nextElementSibling.className="show";
-			else{
-				li.parentNode.children[0].className="show";
-			} 
-		}
-		var timer=setInterval(task,3000);
-				 //当鼠标进入
-		slider.onmouseover=function(){
-			clearInterval(timer) //停止
-		}
-		slider.onmouseout=function(){ //当鼠标移出
-			timer=setInterval(task,2000);
-		}
+
+	//初始化让第一张图片显示，和第一个原点显示
+	aBanner[0].style.opacity = "1";
+	aSpan[0].className = "active";
+	var num = 0;
+	for (var i = 0; i < aSpan.length; i++) {
+			aSpan[i].index = i;
+			//点击底部小圆点图片相对应的进行切换
+			aSpan[i].onclick = function () {
+					for (var j = 0; j < aSpan.length; j++) {
+							num = this.index;
+							aSpan[j].className = "";
+							aBanner[j].style.opacity = "0";
+					}
+					aBanner[num].style.opacity = "1";
+					aSpan[num].className = "active";
+			}
+	}
+	var Time=function () {/*设置定时器运行的函数*/
+			num++;
+			if(num<0){num=4+num%5;}
+			if (num < aSpan.length) {
+					for (var j = 0; j < aSpan.length; j++) {
+							aSpan[j].className = "";
+							aBanner[j].style.opacity = "0";
+					}
+					aSpan[num].className = "active";
+					aBanner[num].style.opacity = "1";
+			} else {
+					num = -1;
+					Time();
+			}
+	}
+	clearInterval(timer);
+	var timer = setInterval(Time, 2000);/*调用定时器*/
+	aWrap.onmouseover = function () {/*鼠标引入，清除定时器，轮播图停止*/
+			clearInterval(timer);
+	}
+	aWrap.onmouseout = function () {/*鼠标移出，重新调用定时器，轮播图开始*/
+			timer = setInterval(Time, 2000);
+	}
+})();

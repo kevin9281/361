@@ -9,17 +9,41 @@
 		var lid =search.split("=")[1]; //声明lid等于search传来参数里面的split切割等号后面的1位
 	//	console.log(lid); //打桩
 		$.ajax({
-			url:"http://127.0.0.1:8080/details/detail?pid="+ lid,
+			url:"http://127.0.0.1:8080/detail/detail?pid="+ lid,
 			type:"get",
 			dataType:"json",
 			success:function (res) { //请求处理成功进入success里面处理函数
 	//			console.log(res);   //打桩
 	//从res大对象中解构出三个小部分分别使用
 	// var {img,id}=res; //声明产品 规格 图片赋值到res传参
-	console.log(res);
-			}}
-		)}
-	});
+	//console.log(res);
+			var html = "";
+			    html += `<div class="smallpic">
+					<a class="selected">
+						<img src="${res.img.mg}" data-mig="${res.img.lg}"data-big="${res.img.lg}"class="my-small">
+					</a>
+					<a>
+						<img src="${res.img.mg2}"  data-mig="${res.img.lg2}"data-big="${res.img.lg2}"class="my-small">
+					</a>
+					<a>
+						<img src="${res.img.mg3}" data-mig="${res.img.lg3}" data-big="${res.img.lg3}"class="my-small">
+					</a>
+					<a>
+						<img src="${res.img.mg4}" data-mig="${res.img.lg4}" data-big="${res.img.lg4}"class="my-small">
+					</a>
+				</div>
+				<div id="demo">
+				<div id="small-box">
+					<div id="mark"></div>
+					<div id="float-box"></div>
+					<img src="${res.img.lg}" class="my-big"/>
+				</div>
+				<div id="big-box">
+					<img src="${res.img.lg}" class="my-big1"/>
+				</div>
+			</div>`;
+
+				$("#piclist").html(html);
 
 //多方向看详图 start
 $(".my-small").hover( function (){  //1.查找触发事件的元素
@@ -29,6 +53,12 @@ $(".my-big").attr({src});  //4.修改元素
 $(".my-big1").attr({src});
 });
 //多方向看详图 end
+
+			}}
+		)}
+	});
+
+
 
 
 //选颜色 换颜色分类  start

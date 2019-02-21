@@ -21,8 +21,16 @@ router.get("/detail",(req,res)=>{
 		 res.send(output);
 		//  console.log(output);
 	})
-})
+});
 
+//创建商城商品接口
+router.get("/product",(req,res)=>{
+	var sql = "SELECT * FROM yjs_commodit";
+	pool.query(sql,(err,result)=>{
+		if(err)throw err;
+		res.send(result);
+	})
+});
 
 
 //导出路由器
