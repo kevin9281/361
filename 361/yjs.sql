@@ -73,14 +73,11 @@ CREATE TABLE yjs_commodit(
   lg VARCHAR(128),
   mg VARCHAR(128),
   lg2 VARCHAR(128),
-  mg2 VARCHAR(128),
-  lg3 VARCHAR(128),
-  mg3 VARCHAR(128)
+  mg2 VARCHAR(128)
 );
 
-INSERT INTO yjs_commodit VALUES(null,"套头卫衣","¥199","images/b_5c10cb5b98955.jpg","images/m_5c10cb5b98955.jpg","images/b_5c10cb59cf5cd.jpg","images/m_5c10cb59cf5cd.jpg",null,null);
-INSERT INTO yjs_commodit VALUES(null,"套头卫衣","¥259","images/b_5c0e287b37f5d.jpg","images/m_5c0e287b37f5d.jpg","images/b_5c0e287c78b1b.jpg","images/m_5c0e287c78b1b.jpg",null,null);
-INSERT INTO yjs_commodit VALUES(null,"连帽开襟卫衣","¥359","images/b_5c0e30052adb0.jpg","images/m_5c0e30052adb0.jpg","images/b_5c0e3003d1cbb.jpg","images/m_5c0e3003d1cbb.jpg",null,null);
-INSERT INTO yjs_commodit VALUES(null,"翻领短T袖","¥159","images/b_5b8354b1251d9.jpg","images/m_5b8354b1251d9.jpg","images/b_5b8354b266c7d.jpg","images/m_5b8354b266c7d.jpg","images/b_5b8354b39f4a3.jpg","images/m_5b8354b39f4a3.jpg");
-INSERT INTO yjs_commodit VALUES(null,"运动九分裤","¥199","b_5b83532eb5cf8.jpg","images/m_5b83532eb5cf8.jpg",null,null,null,null);
-INSERT INTO yjs_commodit VALUES(null,"运动五分裤","¥159","images/b_5b8128267d734.jpg","images/m_5b8128267d734.jpg",null,null,null,null);
+INSERT INTO yjs_commodit VALUES(null,"套头卫衣","¥199","images/b_5c10cb5b98955.jpg","images/m_5c10cb5b98955.jpg","images/b_5c10cb59cf5cd.jpg","images/m_5c10cb59cf5cd.jpg");
+INSERT INTO yjs_commodit VALUES(null,"套头卫衣","¥259","images/b_5c0e287b37f5d.jpg","images/m_5c0e287b37f5d.jpg","images/b_5c0e287c78b1b.jpg","images/m_5c0e287c78b1b.jpg");
+INSERT INTO yjs_commodit VALUES(null,"连帽开襟卫衣","¥359","images/b_5c0e30052adb0.jpg","images/m_5c0e30052adb0.jpg","images/b_5c0e3003d1cbb.jpg","images/m_5c0e3003d1cbb.jpg");
+INSERT INTO yjs_commodit VALUES(null,"翻领短T袖","¥159","images/b_5b8354b1251d9.jpg","images/m_5b8354b1251d9.jpg","images/b_5b8354b266c7d.jpg","images/m_5b8354b266c7d.jpg");
+

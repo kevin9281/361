@@ -39,10 +39,10 @@ router.post("/register",(req,res)=>{
 router.post("/login",(req,res)=>{
     var $uname =req.body.uname;
     var $upwd =req.body.upwd;
-    var sql ="SELECT * FROM yjs_user WHERE uname=? and upwd=?"
+    var sql ="SELECT * FROM yjs_user WHERE uname=? AND upwd=?"
     pool.query(sql,[$uname,$upwd],(err,result)=>{
         if(err) throw err;
-        if(result.length>0){
+        if(result.length==1){
             res.send({ok:1});
         }else{
             res.send({ok:0});

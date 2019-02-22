@@ -31,7 +31,7 @@ router.get("/product",(req,res)=>{
 		res.send(result);
 	})
 });
-
+//验证 http://127.0.0.1:8080/detail/product
 
 //导出路由器
 module.exports=router;

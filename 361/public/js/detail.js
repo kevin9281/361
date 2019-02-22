@@ -147,7 +147,6 @@ function() {
 
 //	详情评论说明 多标签页面 start
 	var a=document.getElementById("content1").style.display = "block"; 
-	console.log(a);
 //1.查找触发事件的元素
 //查找data-toggle属性为tab的所有元素
 var tabs = document.querySelectorAll ("[data-toggle=tab]");
@@ -175,5 +174,10 @@ tab.className = "select";
  }
 };
 //	详情评论说明 多标签页面 end
+
+
+
+
+
 
 })();

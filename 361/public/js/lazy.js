@@ -8,7 +8,7 @@
 			$("img.lazy").removeClass("lazy");
 		}
 		//懒加载
-		var Loading=true;
+/* 		var Loading=true;
 		var page = "1",param ="",scrollTop = "0",loadUrl="/Product/shop.html?keyword=&page=2";
 		$(window).scroll(function() {
 			if ($(this).scrollTop() + $(window).height()+1900 >= $(document).height() && $(this).scrollTop() > 100) {
@@ -24,4 +24,4 @@
 					});
 				}
 			}
-		}); 
+		});  */
